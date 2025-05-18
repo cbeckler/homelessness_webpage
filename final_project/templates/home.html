@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css"  href="{% static 'css/samplecss.css' %}">
+    <title>Top 8 US Cities</title>
+</head>
+<body>
+    <h1>Homelessness in Major US Cities</h1>
+    <text>Homelessness is a major problem in the United States. Here, we look at the number and proportion of homeless people in the top 8 US states by population: New York, 
+        Los Angeles, Chicago, Houston, Phoenix, Philadelphia, San Antonio, and San Diego. You can click the links to see the data in graph form.
+        <br></br>
+        You can also click the Go to Search link to ask Google Gemini AI about more details for each city.
+    </text>
+    <br></br>
+    <img src="{% static 'benchsleep.jpg' %}"/>
+    <br></br>
+    <ul class="navbar">
+    <li>
+        <a href="{% url 'population' %}">
+            Go to Population Graph
+        </a>
+    </li>
+    <li>
+        <a href="{% url 'homeless' %}">
+            Go to Homeless Population Graph
+        </a>
+    </li>
+    <li>
+        <a href="{% url 'proportion' %}">
+            Go to Homeless % Graph
+        </a>
+    </li>
+    <li>
+        <a href="{% url 'search' %}">
+            Go to Search
+        </a>
+    </li>
+    </ul>
+</body>
+</html>
+
+
